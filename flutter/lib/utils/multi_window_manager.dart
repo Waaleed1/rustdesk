@@ -52,10 +52,10 @@ class MultiWindowCallResult {
 /// Window Manager
 /// mainly use it in `Main Window`
 /// use it in sub window is not recommended
-class BP RemoteMultiWindowManager {
-  BP RemoteMultiWindowManager._();
+class RustDeskMultiWindowManager {
+  RustDeskMultiWindowManager._();
 
-  static final instance = BP RemoteMultiWindowManager._();
+  static final instance = RustDeskMultiWindowManager._();
 
   final Set<int> _inactiveWindows = {};
   final Set<int> _activeWindows = {};
@@ -578,4 +578,4 @@ class BP RemoteMultiWindowManager {
   }
 }
 
-final rustDeskWinManager = BP RemoteMultiWindowManager.instance;
+final rustDeskWinManager = RustDeskMultiWindowManager.instance;

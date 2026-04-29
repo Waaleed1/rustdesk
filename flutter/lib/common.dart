@@ -251,16 +251,16 @@ class MyTheme {
   MyTheme._();
 
   static const Color grayBg = Color(0xFFEFEFF2);
-  static const Color accent = Color(0xFF00C4B4);
-  static const Color accent50 = Color(0x7700C4B4);
-  static const Color accent80 = Color(0xAA00C4B4);
+  static const Color accent = Color(0xFF0071FF);
+  static const Color accent50 = Color(0x770071FF);
+  static const Color accent80 = Color(0xAA0071FF);
   static const Color canvasColor = Color(0xFF212121);
   static const Color border = Color(0xFFCCCCCC);
-  static const Color idColor = Color(0xFFC4006A);
+  static const Color idColor = Color(0xFF00B6F0);
   static const Color darkGray = Color.fromARGB(255, 148, 148, 148);
   static const Color cmIdColor = Color(0xFF21790B);
   static const Color dark = Colors.black87;
-  static const Color button = Color(0xFF3350C4);
+  static const Color button = Color(0xFF2C8CFF);
   static const Color hoverBorder = Color(0xFF999999);
 
   // ListTile
@@ -1270,7 +1270,7 @@ Color? _msgboxColor(String type) {
   if (type.contains("error") || type == "re-input-password") {
     return Color(0xFFE04F5F);
   }
-  return Color(0xFF3350C4);
+  return Color(0xFF2C8CFF);
 }
 
 Widget msgboxIcon(String type) {
@@ -2805,7 +2805,7 @@ Future<void> onActiveWindowChanged() async {
     } catch (err) {
       debugPrintStack(label: "$err");
     } finally {
-      debugPrint("Start closing BP Remote...");
+      debugPrint("Start closing RustDesk...");
       await windowManager.setPreventClose(false);
       await windowManager.close();
       if (isMacOS) {
@@ -2821,9 +2821,9 @@ Future<void> onActiveWindowChanged() async {
         //
         //```
         // embedder.cc (2725): 'FlutterPlatformMessageCreateResponseHandle' returned 'kInvalidArguments'. Engine handle was invalid.
-        // 2024-11-11 11:41:11.546 BP Remote[90272:2567686] Failed to create a FlutterPlatformMessageResponseHandle (2)
+        // 2024-11-11 11:41:11.546 RustDesk[90272:2567686] Failed to create a FlutterPlatformMessageResponseHandle (2)
         // embedder.cc (2672): 'FlutterEngineSendPlatformMessage' returned 'kInvalidArguments'. Invalid engine handle.
-        // 2024-11-11 11:41:11.565 BP Remote[90272:2567686] Failed to send message to Flutter engine on channel 'flutter/lifecycle' (2).
+        // 2024-11-11 11:41:11.565 RustDesk[90272:2567686] Failed to send message to Flutter engine on channel 'flutter/lifecycle' (2).
         // ```
         periodic_immediate(
             Duration(milliseconds: 30), RdPlatformChannel.instance.terminate);
